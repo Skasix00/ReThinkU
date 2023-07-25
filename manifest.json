@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "ReThinkU",
+  "version": "1.0",
+
+  "description": "Hard refreshes to get rid of the cache (and other stuff)",
+
+  "icons": {
+    "48": "icons/refresh_48x50.png"
+  },
+  "permissions": ["tabs", "activeTab"],
+  "browser_action": {
+    "default_icon": "icons/refresh_48x50.png",
+    "default_title": "ReThinkU"
+  },
+  "background": {
+    "scripts": ["borderify.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
